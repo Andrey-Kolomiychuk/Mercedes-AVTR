@@ -40,6 +40,7 @@ $('.menu-btn').on('click', function(e){
 });
 
 $('.menu__link').on('click', function(e){
+     e.preventDefault;
     $('.menu-btn').toggleClass('menu-btn-active');
     $('.menu').toggleClass('menu__active')
 });
