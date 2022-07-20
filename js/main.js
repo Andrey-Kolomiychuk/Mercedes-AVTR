@@ -35,7 +35,8 @@ $(function(){
 $('.menu-btn').on('click', function(e){
     e.preventDefault;
     $(this).toggleClass('menu-btn-active');
-    $('.menu').toggleClass('menu__active')
+    $('.menu').toggleClass('menu__active');
+    $('.header__logo').toggleClass('header__logo-active')
 });
 
 $('.menu__link').on('click', function(e){
