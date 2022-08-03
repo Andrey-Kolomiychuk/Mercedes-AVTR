@@ -44,3 +44,18 @@ $('.menu__link').on('click', function(e){
     $('.menu').toggleClass('menu__active')
     $('.header__logo').toggleClass('header__logo-active')
 });
+
+$('.premier__btn').on('click', function(e){
+  $('.premier__inner-more').toggleClass('premier__inner-active');
+});
+
+function changeText(ev) {
+  if(ev.getAttribute('data-show') === "true") {
+      ev.innerText = "More"
+      ev.setAttribute('data-show', "false"); 
+  }
+  else {
+      ev.innerText = "Less"
+      ev.setAttribute('data-show', "true"); 
+  }
+}

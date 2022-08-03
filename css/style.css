@@ -14,7 +14,7 @@ html {
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/Corporate-A-Bold.woff2") format("woff2"),
-    url("../fonts/Corporate-A-Bold.woff") format("woff");
+  url("../fonts/Corporate-A-Bold.woff") format("woff");
 }
 
 body {
@@ -262,6 +262,35 @@ ul {
   gap: 60px;
 }
 
+.premier__inner-more{
+  display: none;
+}
+
+.premier__inner-active{
+  display: flex;
+  margin-top: 20px;
+  animation-name: open;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+@keyframes open {
+  0% {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .premier__text {
   margin-bottom: 22px;
 }
@@ -272,7 +301,6 @@ ul {
 
 .premier__btn {
   font-size: "Corporate-A-Bold";
-  display: block;
   width: 100%;
   font-size: 18px;
   line-height: 120%;
@@ -282,6 +310,13 @@ ul {
   text-transform: uppercase;
   border: 1px solid #f402a2;
   transition: all 0.3;
+}
+
+.premier__btn-1200{
+  display: block;
+}
+.premier__btn-768{
+display: none;
 }
 
 .premier__btn:hover {
@@ -461,6 +496,21 @@ ul {
 
   .premier__inner {
     display: block;
+  }
+
+  .premier__inner-more{
+    display: none;
+  }  
+
+  .premier__inner-active{
+    display: block;
+  }
+
+  .premier__btn-1200{
+    display: none;
+  }
+  .premier__btn-768{
+  display: block;
   }
 
   .premier__img {
